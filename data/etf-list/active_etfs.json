@@ -468,7 +468,7 @@ FL-EMMAE,JPM Emerg Markets Eq A acc (USD),USD,JP Morgan Asset Management,JP Morg
 FL-MARKE,JPM Emerg Markets Eq A dist (USD),USD,JP Morgan Asset Management,Nye Markeder
 FL-MIDEE,JPM Emerg Middle East Eq.Fund A(ACC)-USD,USD,JP Morgan Asset Management,JP Morgan Asset Management
 FL-FFEMM,JPM Emerg Mkts Debt A acc Hdg (EUR),EUR,JP Morgan Asset Management,JP Morgan Asset Management
-FL-EMDEB,JPM Emerg Mkts Debt A inc Hdg (EUR),EUR,JP Morgan Asset Management,Internasjonale Obligasjonsfond
+FL-EMDEB,JPM Emerg Mkts Debt A Dist Hdg (EUR),EUR,JP Morgan Asset Management,Internasjonale Obligasjonsfond
 FL-DIAEU,JPM Emerg Mrkts Diversfd Eqt A acc (EUR),EUR,JP Morgan Asset Management,JP Morgan Asset Management
 FL-EEURE,JPM Emerging Europe Equity Fd A ACCU EUR,EUR,JP Morgan Asset Management,JP Morgan Asset Management
 FL-EEEAU,JPM Emerging Europe Equity Fd A ACCU USD,USD,JP Morgan Asset Management,JP Morgan Asset Management
@@ -505,7 +505,7 @@ FL-EUDYN,JPM Europe Dynamic A dist (EUR),EUR,JP Morgan Asset Management,Europeis
 FL-EUREQ,JPM Europe Equity A acc (EUR),EUR,JP Morgan Asset Management,JP Morgan Asset Management
 FL-EUFUN,JPM Europe Equity A dist (EUR),EUR,JP Morgan Asset Management,Europeiske Fond
 FL-EHGHY,JPM Europe High Yld Bd A acc (EUR),EUR,JP Morgan Asset Management,JP Morgan Asset Management
-FL-EUHYB,JPM Europe High Yld Bd A inc (EUR),EUR,JP Morgan Asset Management,Internasjonale Obligasjonsfond
+FL-EUHYB,JPM Europe High Yld Bd A Dist (EUR),EUR,JP Morgan Asset Management,Internasjonale Obligasjonsfond
 FL-ESEQA,JPM Europe Sel Eq A acc (EUR),EUR,JP Morgan Asset Management,Europeiske Fond
 FL-ESMCA,JPM Europe Small Cap A acc (EUR),EUR,JP Morgan Asset Management,JP Morgan Asset Management
 FL-EUSMB,JPM Europe Small Cap A dist (EUR),EUR,JP Morgan Asset Management,Europeiske Fond - SMB
@@ -535,15 +535,13 @@ FL-GEROP,JPM Germany Equity A dist (EUR),EUR,JP Morgan Asset Management,Andre Re
 FL-GLFAD,JPM Gl Fin A dist (USD),USD,JP Morgan Asset Management,JP Morgan Asset Management
 FL-GSELE,JPM Gl Sel Eq A dist (USD),USD,JP Morgan Asset Management,JP Morgan Asset Management
 FL-GCBHE,JPM Glb Corporate Bond A dist hdg (EUR),EUR,JP Morgan Asset Management,JP Morgan Asset Management
-FL-GLMAA,JPM Glb Merger Arbitrage A acc (USD),USD,JP Morgan Asset Management,JP Morgan Asset Management
-FL-GMAAH,JPM Glb Merger Arbitrage A acc Hdg (EUR),EUR,JP Morgan Asset Management,JP Morgan Asset Management
 FL-GBHSE,JPM Glb Strat Bond A pf acc Hgd (SEK),SEK,JP Morgan Asset Management,JP Morgan Asset Management
 FL-GEQUE,JPM Glb Unconstrained Eqt A acc (EUR),EUR,JP Morgan Asset Management,JP Morgan Asset Management
 FL-GBLEQ,JPM Glb Unconstrained Eqt A acc (USD),USD,JP Morgan Asset Management,JP Morgan Asset Management
 FL-GLOEQ,JPM Glb Unconstrained Eqt A dist (USD),USD,JP Morgan Asset Management,Globale Fond
 FL-JPMGS,JPM Glob. Strat. Bnd A (acc) - NOK (hdg),NOK,JP Morgan Asset Management,JP Morgan Asset Management
 FL-BAGBA,JPM Global Aggr Bond A acc (USD),USD,JP Morgan Asset Management,JP Morgan Asset Management
-FL-INTBO,JPM Global Aggr Bond A inc (USD),USD,JP Morgan Asset Management,Internasjonale Obligasjonsfond
+FL-INTBO,JPM Global Aggr Bond A Dist (USD),USD,JP Morgan Asset Management,Internasjonale Obligasjonsfond
 FL-GBOAU,JPM Global Bond Opportunities Aacc (USD),USD,JP Morgan Asset Management,JP Morgan Asset Management
 FL-GLCBA,JPM Global Convertibles(USD) A acc (USD),USD,JP Morgan Asset Management,JP Morgan Asset Management
 FL-GDAEU,JPM Global Dividend A acc (EUR),EUR,JP Morgan Asset Management,JP Morgan Asset Management
@@ -594,7 +592,7 @@ FL-TAWAA,JPM Taiwan A (acc) - USD,USD,JP Morgan Asset Management,JP Morgan Asset
 FL-TAIW,JPM Taiwan A (dist) - USD,USD,JP Morgan Asset Management,Andre Regionale/Internasj. Fond
 FL-USAGB,JPM US Aggregate Bond A acc (USD),USD,JP Morgan Asset Management,JP Morgan Asset Management
 FL-UAABE,JPM US Aggregate Bond A acc - hdg (EUR),EUR,JP Morgan Asset Management,JP Morgan Asset Management
-FL-USDBO,JPM US Aggregate Bond A inc (USD),USD,JP Morgan Asset Management,JP Morgan Asset Management
+FL-USDBO,JPM US Aggregate Bond A Dist (USD),USD,JP Morgan Asset Management,JP Morgan Asset Management
 FL-JPMCB,JPM US Corporate Bond A (acc) - USD,USD,JP Morgan Asset Management,JP Morgan Asset Management
 FL-USEAC,JPM US Equity All Cap A (acc) - USD,USD,JP Morgan Asset Management,JP Morgan Asset Management
 FL-US130,JPM US Equity Plus A (dist) - USD, A,USD,JP Morgan Asset Management,JP Morgan Asset Management
@@ -981,8 +979,8 @@ PA-DYN6M,PARVEST ENHANCED CASH 6 MONTHS,EUR,BNP Paribas Asset Managment,BNP Pari
 PA-AUSTR,PARVEST EQUITY AUSTRALIA,AUD,BNP Paribas Asset Managment,BNP Paribas
 AI-EAEMR,PARVEST EQUITY BEST SELEC.ASIA EX-JAPAN,NOK,Alfred Berg Kapitalforv. AS,Asiatiske Fond Ekskl. Japan
 PA-BRAZC,PARVEST EQUITY BRAZIL,USD,BNP Paribas Asset Managment,BNP Paribas
-PA-BRAZC,PARVEST EQUITY BRAZIL,USD,BNP Paribas Asset Managment,BNP Paribas
 AI-EQCHA,PARVEST EQUITY CHINA,NOK,Alfred Berg Kapitalforv. AS,Kinesiske Fond
+AI-EMEUR,PARVEST EQUITY EUROPE EMERGING,NOK,Alfred Berg Kapitalforv. AS,Osteuropeiske Fond
 AI-EMEUR,PARVEST EQUITY EUROPE EMERGING,NOK,Alfred Berg Kapitalforv. AS,Osteuropeiske Fond
 AI-EGREU,PARVEST EQUITY EUROPE GROWTH,NOK,Alfred Berg Kapitalforv. AS,Europeiske Fond
 PA-EUMID,PARVEST EQUITY EUROPE MID CAP,EUR,BNP Paribas Asset Managment,BNP Paribas
@@ -1035,6 +1033,7 @@ FO-RENTE,PLUSS Rente (Fondsforvaltning),NOK,Fondsforvaltning,Obligasjonsfond 0-2
 FO-UTLAN,PLUSS Utland Aksje (Fondsforvaltning),NOK,Fondsforvaltning,Globale Fond
 FO-PLUET,PLUSS Utland Etisk (Fondsforvaltning),NOK,Fondsforvaltning,Globale Fond
 SV-PREUR,Procedo EUR R (EUR),EUR,Sparinvest Sicav,Uklassifiserte Andre Fond
+AI-SKAFS,Sbanken Framgang Sammen,NOK,Alfred Berg Kapitalforv. AS,Norske Fond
 SC-EMEUR,Schroder Emerg Europe A (EUR),EUR,Schroder Investment Management,Osteuropeiske Fond
 SC-ASPPS,Schroder Int. Select. Asia Cities R. Est,USD,Schroder Investment Management,Schroder Investment Man. S.A.
 SC-EMEUA,Schroder Int. Select. Fnd European Value,EUR,Schroder Investment Management,Schroder Investment Man. S.A.
@@ -1114,7 +1113,6 @@ ST-KRONA,SKAGEN Krona (SEK),SEK,SKAGEN,Andre Rentefond
 ST-M2,SKAGEN m2,NOK,SKAGEN,Bransjefond - Eiendom
 ST-TELLU,SKAGEN Tellus,NOK,SKAGEN,Andre Rentefond
 ST-VEKST,SKAGEN Vekst A,NOK,SKAGEN,Andre Regionale/Internasj. Fond
-AI-SKAFS,Skandiabanken Framgang Sammen,NOK,Alfred Berg Kapitalforv. AS,Norske Fond
 KL-AGERG,Spesialfondet KLP Alfa Global Energi,NOK,KLP Kapitalforvaltning AS,Hedgefond/Andre Fond
 KL-AGRNT,Spesialfondet KLP Alfa Global Rente,NOK,KLP Kapitalforvaltning AS,Andre Rentefond
 FF-SPVA,SPV Aksje,NOK,Danske Capital AS,Andre Regionale/Internasj. Fond
