@@ -19,7 +19,7 @@ py -3.5 -m pip install -r requirements.txt
 
 ## How to Run the Program
 
-All commands described below can be ran from cmd.
+All commands described below can be ran from cmd. Be aware that the first time the program is running, it has to update the database, since it is too large (170MB+) for Github.
 
 ### Running main.py
 ```
