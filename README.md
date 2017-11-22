@@ -41,7 +41,13 @@ py -3.5 main.py EO-NORDN weekends
 py -3.5 main.py EO-NORDD weekends upd
 ```
 
-## Results
+## Run Result Examples
+
+**X-axis** is defined between 1 and 31 to represent all potential days in the month.
+
+**Y-axis** defines how many ETF-stocks you are able to purchase for 500/month in average, for each specific day. 
+
+**Blue line** shows the average line for all values.
 
 ### EO-NORDN : Trade Days Rating
 
