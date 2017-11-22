@@ -51,6 +51,8 @@ py -3.5 main.py EO-NORDD weekends upd
 
 ### EO-NORDN : Trade Days Rating
 
+Rates are only based on that the specific date is a trade day. If the date is a weekend or vacation (not a trade day), then the results will not be included.
+
 ```
 py -3.5 main.py EO-NORDN trade_days
 ```
@@ -58,6 +60,8 @@ py -3.5 main.py EO-NORDN trade_days
 ![Trade_days rating for EO-NORDN](https://github.com/FredrikBakken/etf-invest-simulation/blob/master/data/results/trade_days/EO_NORDN.png)
 
 ### EO-NORDN : Weekends Rating
+
+Rates are based on that the specific date is a trade day. If the date is a weekend or vacation (not a trade day), then the results will use the values for the next trading day. 
 
 ```
 py -3.5 main.py EO-NORDN weekends
