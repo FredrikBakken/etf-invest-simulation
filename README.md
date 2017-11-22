@@ -59,6 +59,8 @@ py -3.5 main.py EO-NORDN trade_days
 
 ![Trade_days rating for EO-NORDN](https://github.com/FredrikBakken/etf-invest-simulation/blob/master/data/results/trade_days/EO_NORDN.png)
 
+Results shows that you get the most ETF-stocks in total by investing on the 15th day of the month.
+
 ### EO-NORDN : Weekends Rating
 
 Rates are based on that the specific date is a trade day. If the date is a weekend or vacation (not a trade day), then the results will use the values for the next trading day. 
@@ -68,3 +70,5 @@ py -3.5 main.py EO-NORDN weekends
 ```
 
 ![Weekends rating for EO-NORDN](https://github.com/FredrikBakken/etf-invest-simulation/blob/master/data/results/weekends/EO_NORDN.png)
+
+Results shows that you get the most ETF-stocks in total by investing on the 16th day of the month and the next available trading day if the 16th is a weekend/vacation day.
