@@ -30,15 +30,15 @@ py -3.5 main.py <ticker> <method> <update>
 
 ```<ticker>``` must be stated as a parameter since it defines which ETF to perform rating on.
  
-```<method>``` must be stated as a parameter since it defines which rating method use. Available methods: 'trade_days', 'weekends'.
+```<method>``` must be stated as a parameter since it defines which rating method use. Available methods: 'trade_days', 'weekends', 'average_more'.
 
 ```<update>``` is optional and updates the database with newest data entries.
 
 **Examples**
 ```
-py -3.5 main.py EO-NORDS trade_days
+py -3.5 main.py EO-NORDS trade_days upd
 py -3.5 main.py EO-NORDN weekends
-py -3.5 main.py EO-NORDD weekends upd
+py -3.5 main.py EO-NORDD average_more
 ```
 
 ## Run Result Examples

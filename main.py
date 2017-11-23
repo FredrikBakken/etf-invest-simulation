@@ -21,12 +21,14 @@ def initialize(arg):
 
 
 def run(ticker, method, update):
-    if update == 'upd' or not os.path.exists('/data/db/database.db'):
+
+    if update == 'upd' or not os.path.exists('data/db/database.db'):
         # Download ETFs and store into databases
         download_etfs()
 
         # Store historical data into sqlite3 database
         store_etfs()
+
 
     # Perform rating
     rate_etfs(ticker, method)

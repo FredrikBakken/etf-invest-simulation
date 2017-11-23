@@ -9,12 +9,9 @@ def rate_etfs(etf_ticker, method):
     # Variables
     monthly_investment = 500
     check_dates = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31']
-    results = []
     d1 = []
     d2 = []
-    all_ds = []
-    all_dd = []
-    difference_list = 0
+    delta = []
 
     # Getting all historical values for etf
     data = select_db(etf_ticker)
@@ -32,15 +29,19 @@ def rate_etfs(etf_ticker, method):
 
     # Rating method selection
     if method == 'trade_days':
-        trade_days(method, check_dates, d1, delta, data, monthly_investment, etf_ticker, results)
+        trade_days(method, check_dates, d1, delta, data, monthly_investment, etf_ticker)
     elif method == 'weekends':
-        weekends(method, check_dates, d1, delta, all_ds, all_dd, data, monthly_investment, etf_ticker, results)
+        weekends(method, check_dates, d1, delta, data, monthly_investment, etf_ticker)
+    elif method == 'average_more':
+        average_more(method, check_dates, d1, delta, data, monthly_investment, etf_ticker)
     else:
         print('That method does not exist.')
 
 
 # Rating based on the specified date being a trade date
-def trade_days(method, check_dates, d1, delta, data, monthly_investment, etf_ticker, results):
+def trade_days(method, check_dates, d1, delta, data, monthly_investment, etf_ticker):
+    results = []
+
     # Loop through designated dates
     for x in range(len(check_dates)):
         counter = 0
@@ -69,7 +70,11 @@ def trade_days(method, check_dates, d1, delta, data, monthly_investment, etf_tic
 
 
 # Rating based on trade days and weekends, if date is a weekend => Trade on the next tradeable day
-def weekends(method, check_dates, d1, delta, all_ds, all_dd, data, monthly_investment, etf_ticker, results):
+def weekends(method, check_dates, d1, delta, data, monthly_investment, etf_ticker):
+    all_ds = []
+    all_dd = []
+    results = []
+    difference_list = 0
 
     # List all dates between start and end
     for i in range(delta.days + 1):
@@ -81,7 +86,6 @@ def weekends(method, check_dates, d1, delta, all_ds, all_dd, data, monthly_inves
 
     # Find dates where no trades has happened
     difference_list = sorted(list(set(all_ds).difference(all_dd)))
-
 
     # Go through dates and start rating
     for x in range(len(check_dates)):
@@ -132,7 +136,6 @@ def weekends(method, check_dates, d1, delta, all_ds, all_dd, data, monthly_inves
                         print(etf_ticker + ' ' + check_dates[x] + ' ' + previous_trade[k])
                         previous_trade.remove(str(data[j][0]))
 
-
         total_val = number_of_etfs
         avg_total = 0
         try:
@@ -146,6 +149,69 @@ def weekends(method, check_dates, d1, delta, all_ds, all_dd, data, monthly_inves
     sorted_list = sorted(results, key=lambda x: x[1], reverse=True)
 
     plot_results(method, sorted_list, check_dates, etf_ticker)
+
+
+# Rating based on the specified date being a trade date
+def average_more(method, check_dates, d1, delta, data, monthly_investment, etf_ticker):
+    results = []
+
+    # Loop through designated dates
+    for x in range(len(check_dates)):
+        trade_values = []
+        counter = 0
+        number_of_etfs = 0.00
+        number_of_etfs_strat = 0.00
+        amount_invested = 0
+        amount_invested_strat = 0
+
+        for i in range(delta.days + 1):
+            all_dates = '%04d%02d%02d' % ((d1 + timedelta(days=i)).year, (d1 + timedelta(days=i)).month, (d1 + timedelta(days=i)).day)
+            for j in range(len(data)):
+                if all_dates == str(data[j][0]):
+                    number = 0.00
+                    checking_date = '%02d' % (data[j][0] % 100)
+                    if checking_date == check_dates[x]:
+                        trade_values.append(data[j][4])
+
+        for a in range(len(trade_values) - 3):
+            #print(len(trade_values))
+            month1 = trade_values[a + 0]
+            month2 = trade_values[a + 1]
+            month3 = trade_values[a + 2]
+            avg_months = (month1 + month2 + month3) / 3
+
+            month4 = trade_values[a + 3]
+
+            if avg_months > month4:
+                monthly_investment = 750
+            else:
+                monthly_investment = 500
+
+            number = monthly_investment / month4
+            number_of_etfs_strat = number_of_etfs_strat + number
+            amount_invested_strat = amount_invested_strat + monthly_investment
+
+            n_etf = 500 / month4
+            number_of_etfs = number_of_etfs + n_etf
+            amount_invested = amount_invested + 500
+
+
+
+        print('{0:.4f}'.format(number_of_etfs) + ' ({0:.4f})'.format(number_of_etfs / amount_invested) + ' vs. ' + '{0:.4f}'.format(number_of_etfs_strat) + '({0:.4f})'.format(number_of_etfs_strat / amount_invested_strat))
+
+
+
+        '''
+        total_val = number_of_etfs
+        avg_total = total_val / counter
+
+        total = [check_dates[x], avg_total, counter]
+        results.append(total)
+
+    sorted_list = sorted(results, key=lambda x: x[1], reverse=True)
+
+    plot_results(method, sorted_list, check_dates, etf_ticker)
+    '''
 
 
 # Plot the results into a graph
